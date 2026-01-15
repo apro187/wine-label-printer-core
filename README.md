@@ -43,7 +43,7 @@ python -m wine_label_printer.main --batch-size 10
 python -m wine_label_printer.main --viewer-url http://localhost:5001
 
 # Override CellarTracker credentials
-python -m wine_label_printer.main --username myuser --password mypass --api-key mykey
+python -m wine_label_printer.main --username myuser --password mypass
 
 # Combine multiple options
 python -m wine_label_printer.main --printer-ip 192.168.1.200 --batch-size 5 --simulate
@@ -57,7 +57,6 @@ python -m wine_label_printer.main --printer-ip 192.168.1.200 --batch-size 5 --si
 - `-s, --simulate` - Run in simulation mode (don't print)
 - `-t, --test-mode` - Don't update printed IDs file
 - `--viewer-url` - Override ZPL viewer URL
-- `--api-key` - Override CellarTracker API key
 - `--username` - Override CellarTracker username
 - `--password` - Override CellarTracker password
 

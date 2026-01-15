@@ -247,11 +247,6 @@ def parse_args():
         help="Override ZPL viewer URL for previews"
     )
     parser.add_argument(
-        "--api-key",
-        default=None,
-        help="Override CellarTracker API key"
-    )
-    parser.add_argument(
         "--username",
         default=None,
         help="Override CellarTracker username"
@@ -294,10 +289,6 @@ def main():
     if args.viewer_url:
         base_config["viewer"]["url"] = args.viewer_url
         logging.info("Overriding viewer URL to: %s", args.viewer_url)
-    
-    if args.api_key:
-        base_config["cellartracker"]["api_key"] = args.api_key
-        logging.info("Overriding CellarTracker API key")
     
     if args.username:
         base_config["cellartracker"]["username"] = args.username
