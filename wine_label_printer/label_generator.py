@@ -79,9 +79,9 @@ class LabelGenerator:
         img = Image.new("RGB", (canvas_width, canvas_height), color="white")
         draw = ImageDraw.Draw(img)
 
-        # Generate QR code with CellarTracker URL
-        barcode = wine_data.get("Barcode", "")
-        qr_url = barcode if not barcode else f"https://www.cellartracker.com/wine.asp?iWine={barcode}"
+        # Generate QR code with CellarTracker URL using iWine field
+        iwine = wine_data.get("iWine", "")
+        qr_url = iwine if not iwine else f"https://www.cellartracker.com/wine.asp?iWine={iwine}"
         
         qr = qrcode.QRCode(version=1, box_size=10, border=5)
         qr.add_data(qr_url)
@@ -420,12 +420,12 @@ class LabelGenerator:
             return str(value).replace("^", " ")
 
         qr_scale = max(2, min(10, int(round(qr_size / 25))))
-        barcode = safe_str(wine_data.get("Barcode", ""))
+        iwine = safe_str(wine_data.get("iWine", ""))
         
-        # Generate CellarTracker URL for QR code if we have a barcode/iWine ID
-        qr_data = barcode
-        if barcode:
-            qr_data = f"https://www.cellartracker.com/wine.asp?iWine={barcode}"
+        # Generate CellarTracker URL for QR code if we have an iWine ID
+        qr_data = iwine
+        if iwine:
+            qr_data = f"https://www.cellartracker.com/wine.asp?iWine={iwine}"
 
         zpl_lines = [
             "^XA",
