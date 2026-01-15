@@ -1,0 +1,5 @@
+services:
+  binarykits-zpl-viewer:
+    image: yipingruan/binarykits-zpl:latest
+    ports:
+      - "8088:8080"

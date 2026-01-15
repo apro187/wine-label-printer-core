@@ -1,0 +1,5 @@
+Pillow==10.0.0
+qrcode==7.3
+pandas==2.3.3
+PyYAML==6.0
+requests==2.32.0
