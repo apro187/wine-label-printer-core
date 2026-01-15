@@ -1,6 +1,7 @@
 import os
 import yaml
 import logging
+import argparse
 from datetime import datetime
 try:
     from wine_label_printer.label_generator import LabelGenerator
@@ -80,18 +81,32 @@ def save_printed_ids(path, printed_ids):
 class WineLabelPrinter:
     """Main class for printing wine labels from CellarTracker inventory."""
     
-    def __init__(self, config_path=None):
-        """Initialize the wine label printer."""
+    def __init__(self, config_path=None, config_overrides=None):
+        """Initialize the wine label printer.
+        
+        Args:
+            config_path: Path to config.yaml file
+            config_overrides: Dictionary of config values to override from file
+        """
         if config_path is None:
             config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "config.yaml"))
         self.config_path = config_path
         self.label_generator = LabelGenerator(config_path)
         self.config = self.label_generator.config
+        
+        # Apply any config overrides
+        if config_overrides:
+            self.config.update(config_overrides)
+            logging.info("Applied config overrides")
+        
         logging.info("Initialized WineLabelPrinter with config: %s", config_path)
     
-    def run(self):
+    def run(self, test_mode=False):
         """
         Run the label printing process.
+        
+        Args:
+            test_mode: If True, don't update the printed IDs file
         
         Returns:
             int: Number of labels printed, or None if no new wines
@@ -195,15 +210,109 @@ class WineLabelPrinter:
             raise
 
 
+def parse_args():
+    """Parse command-line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Wine Label Printer - Generate and print wine labels from CellarTracker"
+    )
+    parser.add_argument(
+        "-c", "--config",
+        default=None,
+        help="Path to config.yaml file (default: config.yaml in script directory)"
+    )
+    parser.add_argument(
+        "-p", "--printer-ip",
+        default=None,
+        help="Override printer IP address from config"
+    )
+    parser.add_argument(
+        "-b", "--batch-size",
+        type=int,
+        default=None,
+        help="Override batch size for printing"
+    )
+    parser.add_argument(
+        "-s", "--simulate",
+        action="store_true",
+        help="Run in simulation mode (don't actually print)"
+    )
+    parser.add_argument(
+        "-t", "--test-mode",
+        action="store_true",
+        help="Test mode - don't update printed IDs file"
+    )
+    parser.add_argument(
+        "--viewer-url",
+        default=None,
+        help="Override ZPL viewer URL for previews"
+    )
+    parser.add_argument(
+        "--api-key",
+        default=None,
+        help="Override CellarTracker API key"
+    )
+    parser.add_argument(
+        "--username",
+        default=None,
+        help="Override CellarTracker username"
+    )
+    parser.add_argument(
+        "--password",
+        default=None,
+        help="Override CellarTracker password"
+    )
+    return parser.parse_args()
+
+
 def main():
     """Main entry point for standalone use."""
-    config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "config.yaml"))
+    args = parse_args()
+    
+    # Determine config path
+    if args.config:
+        config_path = os.path.abspath(args.config)
+    else:
+        config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "config.yaml"))
+    
+    # Load base config
     base_config = load_config(config_path)
     setup_logging(base_config)
     
-    # Use the new WineLabelPrinter class
-    printer = WineLabelPrinter(config_path)
-    result = printer.run()
+    # Apply command-line overrides
+    if args.printer_ip:
+        base_config["printer"]["ip"] = args.printer_ip
+        logging.info("Overriding printer IP to: %s", args.printer_ip)
+    
+    if args.batch_size:
+        base_config["printer"]["batch_size"] = args.batch_size
+        logging.info("Overriding batch size to: %d", args.batch_size)
+    
+    if args.simulate:
+        base_config["printer"]["simulate"] = True
+        logging.info("Running in simulation mode")
+    
+    if args.viewer_url:
+        base_config["viewer"]["url"] = args.viewer_url
+        logging.info("Overriding viewer URL to: %s", args.viewer_url)
+    
+    if args.api_key:
+        base_config["cellartracker"]["api_key"] = args.api_key
+        logging.info("Overriding CellarTracker API key")
+    
+    if args.username:
+        base_config["cellartracker"]["username"] = args.username
+        logging.info("Overriding CellarTracker username")
+    
+    if args.password:
+        base_config["cellartracker"]["password"] = args.password
+        logging.info("Overriding CellarTracker password")
+    
+    # Use the new WineLabelPrinter class with modified config
+    printer = WineLabelPrinter(config_path, config_overrides=base_config)
+    result = printer.run(test_mode=args.test_mode)
+    
+    logging.info("Completed. Printed %d labels.", result)
+    return result
 
 if __name__ == "__main__":
     main()

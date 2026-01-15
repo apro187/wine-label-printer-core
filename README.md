@@ -18,6 +18,51 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Command Line
+
+```bash
+# Basic usage (uses config.yaml in script directory)
+python -m wine_label_printer.main
+
+# With custom config file
+python -m wine_label_printer.main --config /path/to/config.yaml
+
+# Override printer IP
+python -m wine_label_printer.main --printer-ip 192.168.1.200
+
+# Run in simulation mode (don't actually print)
+python -m wine_label_printer.main --simulate
+
+# Test mode (don't update printed IDs file)
+python -m wine_label_printer.main --test-mode
+
+# Override batch size
+python -m wine_label_printer.main --batch-size 10
+
+# Override viewer URL
+python -m wine_label_printer.main --viewer-url http://localhost:5001
+
+# Override CellarTracker credentials
+python -m wine_label_printer.main --username myuser --password mypass --api-key mykey
+
+# Combine multiple options
+python -m wine_label_printer.main --printer-ip 192.168.1.200 --batch-size 5 --simulate
+```
+
+### Available Flags
+
+- `-c, --config` - Path to config.yaml file
+- `-p, --printer-ip` - Override printer IP address
+- `-b, --batch-size` - Override batch size for printing
+- `-s, --simulate` - Run in simulation mode (don't print)
+- `-t, --test-mode` - Don't update printed IDs file
+- `--viewer-url` - Override ZPL viewer URL
+- `--api-key` - Override CellarTracker API key
+- `--username` - Override CellarTracker username
+- `--password` - Override CellarTracker password
+
+### Python API
+
 ```python
 from wine_label_printer import WineLabelPrinter
 
