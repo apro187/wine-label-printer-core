@@ -1,0 +1,30 @@
+printer:
+  ip: "192.168.0.189"
+  port: 9100
+  darkness: 15
+  batch_size: 25
+  simulate: false
+  # By default we don't save raw ZPL packages to disk; set true to retain .zpl files for debugging
+  save_zpl_files: false
+  # Network resilience for remote printer connections
+  retry_attempts: 5
+  retry_delay: 2
+  network_timeout: 10
+
+viewer:
+  url: "http://localhost:5001"
+  enabled: true
+
+storage:
+  output_dir: "tmp"
+  printed_ids_path: "storage/printed_ids.txt"
+  cellartracker_csv_path: "storage/cellartracker_inventory.csv"
+
+label:
+  width: 4
+  height: 6
+  dpi: 203
+  
+print_new_only: true
+test_mode: false
+copies_per_label: 1

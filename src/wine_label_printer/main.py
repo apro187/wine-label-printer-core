@@ -134,8 +134,13 @@ class WineLabelPrinter:
             )
             logging.info("Fetched %d inventory rows", len(inventory_df))
             
-            # Create printer instance
+            # Create printer instance with overridden config
             printer = Printer(self.config_path, simulate=False)
+            # Apply config overrides to printer instance
+            if hasattr(self, 'config') and self.config:
+                printer.config = self.config
+                if 'printer' in self.config and 'ip' in self.config['printer']:
+                    printer.printer_ip = self.config['printer']['ip']
             
             # Get paths from config
             storage = config.get("storage", {})
