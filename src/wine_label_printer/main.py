@@ -151,17 +151,17 @@ class WineLabelPrinter:
                 os.path.join("storage", "cellartracker_inventory.csv")
             )
 
-                # Resolve storage paths relative to config directory
-                config_dir = os.path.dirname(os.path.abspath(self.config_path))
-                if not os.path.isabs(output_dir):
-                    output_dir = os.path.join(config_dir, output_dir)
-                if not os.path.isabs(printed_ids_path):
-                    printed_ids_path = os.path.join(config_dir, printed_ids_path)
-                if cellartracker_csv_path and not os.path.isabs(cellartracker_csv_path):
-                    cellartracker_csv_path = os.path.join(config_dir, cellartracker_csv_path)
+            # Resolve storage paths relative to config directory
+            config_dir = os.path.dirname(os.path.abspath(self.config_path))
+            if not os.path.isabs(output_dir):
+                output_dir = os.path.join(config_dir, output_dir)
+            if not os.path.isabs(printed_ids_path):
+                printed_ids_path = os.path.join(config_dir, printed_ids_path)
+            if cellartracker_csv_path and not os.path.isabs(cellartracker_csv_path):
+                cellartracker_csv_path = os.path.join(config_dir, cellartracker_csv_path)
             
-                logging.info("Storage paths - output: %s, printed_ids: %s, csv: %s", 
-                            output_dir, printed_ids_path, cellartracker_csv_path)
+            logging.info("Storage paths - output: %s, printed_ids: %s, csv: %s", 
+                        output_dir, printed_ids_path, cellartracker_csv_path)
             
             # Prepare directories
             os.makedirs(output_dir, exist_ok=True)
