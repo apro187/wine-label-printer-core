@@ -2,7 +2,7 @@ printer:
   ip: "localhost"
   port: 9100
   darkness: 15
-  batch_size: 25
+  batch_size: 50
   simulate: false
   # By default we don't save raw ZPL packages to disk; set true to retain .zpl files for debugging
   save_zpl_files: false
