@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wine-label-printer-core"
+version = "0.1.0"
+dependencies = [
+    "Pillow>=9.0",
+    "qrcode>=7.0",
+    "pandas>=2.0",
+    "PyYAML>=6.0",
+    "requests>=2.25",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

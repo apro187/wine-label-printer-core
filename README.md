@@ -85,11 +85,39 @@ printer:
   ip: "192.168.1.100"
   port: 9100
   darkness: 15
+  # By default we don't save raw ZPL packages to disk. Set to true to retain .zpl files for debugging
+  save_zpl_files: false
 
 storage:
   printed_ids_path: "storage/printed_ids.txt"
   cellartracker_csv_path: "storage/cellartracker_inventory.csv"
 ```
+
+## Testing with local viewer (BinaryKits)
+
+For local testing you can use the BinaryKits viewer + TCP proxy we've prepared in the `utilities/binarykits.zpl` repository (or in this workspace under `../binarykits.zpl`). That stack exposes a virtual printer port (TCP 9100) which forwards ZPL to the viewer and returns JSON feedback.
+
+Quick steps:
+
+1. Start the BinaryKits compose stack (from `utilities/binarykits.zpl`):
+
+```bash
+cd ../binarykits.zpl
+docker compose -f docker-compose.yml up -d --build
+```
+
+2. Run the core integration test (it will send a sample ZPL to `127.0.0.1:9100` and verify feedback):
+
+```bash
+pytest -q tests/test_integration_with_viewer.py -q
+```
+
+Notes:
+
+- The core application no longer renders or saves preview images locally by default — rendering is handled by the external viewer/proxy.
+- The core will attempt to read JSON feedback from the printer/proxy connection; if the feedback includes a `nonSupportedCommands` list, a file named `<timestamp>.unsupported.txt` will be written to the output directory you pass to the run (or `tmp/<run_id>/` when running normally).
+- Raw ZPL packages are not saved to disk by default; enable `printer.save_zpl_files: true` in `config.yaml` if you want `.zpl` files retained for debugging.
+- This core package is intentionally not dockerized here; if we decide to provide a docker image later it will be implemented as a fork/variant.
 
 ## Implementations
 

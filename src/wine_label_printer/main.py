@@ -1,8 +1,15 @@
 import os
+import sys
 import yaml
 import logging
 import argparse
 from datetime import datetime
+
+# Ensure src is in path when running as script
+_SRC = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if _SRC not in sys.path:
+    sys.path.insert(0, _SRC)
+
 try:
     from wine_label_printer.label_generator import LabelGenerator
     from wine_label_printer.printer import Printer
@@ -151,10 +158,12 @@ class WineLabelPrinter:
             logging.info("Loaded %d printed IDs", len(printed_ids))
             
             # Get configuration options
-            batch_size = int(config.get("batch_size", 25))
-            print_new_only = bool(config.get("print_new_only", True))
-            test_mode = bool(config.get("test_mode", False))
-            copies_per_label = int(config.get("copies_per_label", 1))
+            batch_size = int(self.config.get("batch_size", 25))
+            print_new_only = bool(self.config.get("print_new_only", True))
+            config_test_mode = bool(self.config.get("test_mode", False))
+            # Use parameter test_mode if provided, otherwise use config
+            use_test_mode = test_mode if test_mode else config_test_mode
+            copies_per_label = int(self.config.get("copies_per_label", 1))
             
             # Process inventory
             labels_printed = 0
@@ -172,7 +181,7 @@ class WineLabelPrinter:
                     continue
                 
                 already_printed = barcode in printed_ids
-                if print_new_only and already_printed and not test_mode:
+                if print_new_only and already_printed and not use_test_mode:
                     continue
                 
                 wine_data = row.to_dict()
@@ -198,7 +207,7 @@ class WineLabelPrinter:
                 return 0
             
             # Update printed IDs
-            if not test_mode:
+            if not use_test_mode:
                 printed_ids.update(printed_this_run)
                 save_printed_ids(printed_ids_path, printed_ids)
                 logging.info("Saved printed IDs to %s", printed_ids_path)
@@ -279,7 +288,7 @@ def main():
         logging.info("Overriding printer IP to: %s", args.printer_ip)
     
     if args.batch_size:
-        base_config["printer"]["batch_size"] = args.batch_size
+        base_config["batch_size"] = args.batch_size
         logging.info("Overriding batch size to: %d", args.batch_size)
     
     if args.simulate:

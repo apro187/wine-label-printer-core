@@ -1,0 +1,368 @@
+2026-01-15 12:29:50,149 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 12:29:50,149 - INFO - Overriding printer IP to: localhost
+2026-01-15 12:29:50,149 - INFO - Overriding batch size to: 10
+2026-01-15 12:29:50,150 - INFO - Applied config overrides
+2026-01-15 12:29:50,150 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 12:29:50,150 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 12:29:50,150 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 12:29:50,743 - INFO - Fetched 105 inventory rows
+2026-01-15 12:29:50,750 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 12:29:50,750 - INFO - Loaded 0 printed IDs
+2026-01-15 12:29:50,868 - INFO - Viewer endpoint ready after 1 attempt(s)
+2026-01-15 12:29:50,870 - INFO - Printer send succeeded on attempt 1
+2026-01-15 12:29:50,870 - INFO - Printed 25 labels
+2026-01-15 12:29:50,871 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 12:29:50,871 - INFO - Completed. Printed 25 labels.
+2026-01-15 12:30:42,132 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 12:30:42,133 - INFO - Overriding printer IP to: localhost
+2026-01-15 12:30:42,133 - INFO - Overriding batch size to: 10
+2026-01-15 12:30:42,133 - INFO - Applied config overrides
+2026-01-15 12:30:42,133 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 12:30:42,133 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 12:30:42,134 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 12:30:42,788 - INFO - Fetched 105 inventory rows
+2026-01-15 12:30:42,796 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 12:30:42,797 - INFO - Loaded 25 printed IDs
+2026-01-15 12:30:42,858 - INFO - Viewer endpoint ready after 1 attempt(s)
+2026-01-15 12:30:42,861 - INFO - Printer send succeeded on attempt 1
+2026-01-15 12:30:42,861 - INFO - Printed 10 labels
+2026-01-15 12:30:42,861 - INFO - Completed. Printed 10 labels.
+2026-01-15 13:10:40,770 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 13:10:40,771 - INFO - Overriding printer IP to: 192.168.0.189
+2026-01-15 13:10:40,771 - INFO - Overriding batch size to: 10
+2026-01-15 13:10:40,772 - INFO - Applied config overrides
+2026-01-15 13:10:40,772 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 13:10:40,772 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 13:10:40,773 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 13:10:41,359 - INFO - Fetched 105 inventory rows
+2026-01-15 13:10:41,364 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 13:10:41,364 - INFO - Loaded 25 printed IDs
+2026-01-15 13:10:41,506 - INFO - Viewer endpoint ready after 1 attempt(s)
+2026-01-15 13:10:41,509 - INFO - Printer send succeeded on attempt 1
+2026-01-15 13:10:41,509 - INFO - Printed 10 labels
+2026-01-15 13:10:41,509 - INFO - Completed. Printed 10 labels.
+2026-01-15 15:56:18,130 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 15:56:18,131 - INFO - Overriding printer IP to: 192.168.0.189
+2026-01-15 15:56:18,132 - INFO - Applied config overrides
+2026-01-15 15:56:18,132 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 15:56:18,132 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 15:56:18,132 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 15:56:19,091 - INFO - Fetched 105 inventory rows
+2026-01-15 15:56:19,095 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 15:56:19,096 - INFO - Loaded 25 printed IDs
+2026-01-15 15:56:19,214 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582134^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDMasseria Tagaro Cinquenoci^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:86.8^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Primitivo^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Puglia^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Valle d'Itria IGT^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^...[truncated]
+2026-01-15 15:56:19,216 - INFO - Printer send succeeded on attempt 1
+2026-01-15 15:56:19,216 - INFO - Printed 25 labels
+2026-01-15 15:56:19,217 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 15:56:19,217 - INFO - Completed. Printed 25 labels.
+2026-01-15 16:59:31,592 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 16:59:31,594 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 16:59:31,594 - INFO - Applied config overrides
+2026-01-15 16:59:31,594 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 16:59:31,594 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 16:59:31,595 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 16:59:32,115 - INFO - Fetched 105 inventory rows
+2026-01-15 16:59:32,120 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 16:59:32,120 - INFO - Loaded 50 printed IDs
+2026-01-15 16:59:32,222 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,196074210^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDDomaine Carneros Le Reve Blanc de Blanc^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:90.0^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Sparkling White - Sparkling / Chardonnay^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: USA, California^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Napa / Sonoma, Carneros^FS^FO171,143^A...[truncated]
+2026-01-15 16:59:32,224 - INFO - Printer send succeeded on attempt 1
+2026-01-15 16:59:32,224 - INFO - Printed 25 labels
+2026-01-15 16:59:32,225 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 16:59:32,225 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:00:34,455 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:00:34,456 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:00:34,456 - INFO - Applied config overrides
+2026-01-15 17:00:34,456 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:00:34,456 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:00:34,457 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:00:34,952 - INFO - Fetched 105 inventory rows
+2026-01-15 17:00:34,956 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:00:34,956 - INFO - Loaded 75 printed IDs
+2026-01-15 17:00:35,071 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:00:35,073 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:00:35,073 - INFO - Printed 25 labels
+2026-01-15 17:00:35,074 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:01:09,716 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:01:09,716 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:01:09,717 - INFO - Applied config overrides
+2026-01-15 17:01:09,717 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:01:09,717 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:01:09,717 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:01:10,238 - INFO - Fetched 105 inventory rows
+2026-01-15 17:01:10,241 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:01:10,242 - INFO - Loaded 75 printed IDs
+2026-01-15 17:01:10,354 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:01:10,356 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:01:10,356 - INFO - Printed 25 labels
+2026-01-15 17:01:10,356 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:03:48,938 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:03:48,938 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:03:48,939 - INFO - Applied config overrides
+2026-01-15 17:03:48,939 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:03:48,939 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:03:48,939 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:03:49,462 - INFO - Fetched 105 inventory rows
+2026-01-15 17:03:49,466 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:03:49,466 - INFO - Loaded 75 printed IDs
+2026-01-15 17:03:49,581 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:03:49,587 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:03:49,588 - INFO - Printed 25 labels
+2026-01-15 17:03:49,588 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:04:28,659 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:04:28,660 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:04:28,660 - INFO - Applied config overrides
+2026-01-15 17:04:28,660 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:04:28,661 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:04:28,661 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:04:29,149 - INFO - Fetched 105 inventory rows
+2026-01-15 17:04:29,153 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:04:29,154 - INFO - Loaded 75 printed IDs
+2026-01-15 17:04:29,272 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:04:29,275 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:04:29,275 - INFO - Printed 25 labels
+2026-01-15 17:04:29,275 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:06:26,247 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:06:26,247 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:06:26,248 - INFO - Applied config overrides
+2026-01-15 17:06:26,248 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:06:26,248 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:06:26,248 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:06:26,905 - INFO - Fetched 105 inventory rows
+2026-01-15 17:06:26,910 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:06:26,910 - INFO - Loaded 75 printed IDs
+2026-01-15 17:06:27,016 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:06:27,019 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:06:27,019 - INFO - Printed 25 labels
+2026-01-15 17:06:27,019 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:07:13,933 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:07:13,934 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:07:13,935 - INFO - Applied config overrides
+2026-01-15 17:07:13,935 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:07:13,935 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:07:13,935 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:07:14,411 - INFO - Fetched 105 inventory rows
+2026-01-15 17:07:14,415 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:07:14,415 - INFO - Loaded 75 printed IDs
+2026-01-15 17:07:14,525 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:07:14,527 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:07:14,527 - INFO - Printed 25 labels
+2026-01-15 17:07:14,527 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:07:44,733 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:07:44,733 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:07:44,734 - INFO - Applied config overrides
+2026-01-15 17:07:44,734 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:07:44,734 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:07:44,735 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:07:45,393 - INFO - Fetched 105 inventory rows
+2026-01-15 17:07:45,397 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:07:45,397 - INFO - Loaded 75 printed IDs
+2026-01-15 17:07:45,514 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:07:45,516 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:07:45,516 - INFO - Printed 25 labels
+2026-01-15 17:07:45,517 - INFO - Completed. Printed 25 labels.
+2026-01-15 17:09:49,456 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 17:09:49,457 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 17:09:49,458 - INFO - Applied config overrides
+2026-01-15 17:09:49,458 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:09:49,458 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 17:09:49,458 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 17:09:49,959 - INFO - Fetched 105 inventory rows
+2026-01-15 17:09:49,964 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 17:09:49,965 - INFO - Loaded 75 printed IDs
+2026-01-15 17:09:50,074 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 17:09:50,076 - INFO - Printer send succeeded on attempt 1
+2026-01-15 17:09:50,077 - INFO - Printed 25 labels
+2026-01-15 17:09:50,077 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:32:38,916 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:32:38,917 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 20:32:38,918 - INFO - Applied config overrides
+2026-01-15 20:32:38,918 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:32:38,918 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:32:38,918 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:32:39,441 - INFO - Fetched 105 inventory rows
+2026-01-15 20:32:39,445 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:32:39,446 - INFO - Loaded 75 printed IDs
+2026-01-15 20:32:39,558 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:32:39,562 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:32:39,562 - INFO - Printed 25 labels
+2026-01-15 20:32:39,562 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:32:46,071 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:32:46,071 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 20:32:46,071 - INFO - Applied config overrides
+2026-01-15 20:32:46,071 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:32:46,071 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:32:46,072 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:32:46,887 - INFO - Fetched 105 inventory rows
+2026-01-15 20:32:46,891 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:32:46,891 - INFO - Loaded 75 printed IDs
+2026-01-15 20:32:47,040 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:32:47,044 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:32:47,044 - INFO - Printed 25 labels
+2026-01-15 20:32:47,044 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:34:11,497 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:34:11,497 - INFO - Overriding printer IP to: 127.0.0.1
+2026-01-15 20:34:11,498 - INFO - Applied config overrides
+2026-01-15 20:34:11,498 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:34:11,498 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:34:11,498 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:34:12,178 - INFO - Fetched 105 inventory rows
+2026-01-15 20:34:12,182 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:34:12,183 - INFO - Loaded 75 printed IDs
+2026-01-15 20:34:12,293 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:34:12,296 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:34:12,296 - INFO - Printed 25 labels
+2026-01-15 20:34:12,297 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:38:44,432 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:38:44,433 - INFO - Applied config overrides
+2026-01-15 20:38:44,433 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:38:44,433 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:38:44,434 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:38:45,521 - INFO - Fetched 105 inventory rows
+2026-01-15 20:38:45,527 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:38:45,527 - INFO - Loaded 75 printed IDs
+2026-01-15 20:38:45,636 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,208028757^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDKirkland Signature Côtes de Provence Rosé^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:87.1^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Rosé / Rosé Blend^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: France, Provence^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Côtes de Provence^FS^FO171,143^A0N,19,19^FB401,1,0,L^F...[truncated]
+2026-01-15 20:38:45,640 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:38:45,640 - INFO - Printed 25 labels
+2026-01-15 20:38:45,640 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:38:45,640 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:42:25,441 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:42:25,444 - INFO - Applied config overrides
+2026-01-15 20:42:25,444 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:42:25,444 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:42:25,444 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:42:25,959 - INFO - Fetched 105 inventory rows
+2026-01-15 20:42:25,965 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:42:25,965 - INFO - Loaded 100 printed IDs
+2026-01-15 20:42:26,002 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,208835402^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDUmani Ronchi Verdicchio dei Castelli di Jesi Classico Superiore Casal di Serra^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:88.8^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry White / Verdicchio^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Marche^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Verdicchio dei Cast...[truncated]
+2026-01-15 20:42:26,006 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:42:26,006 - INFO - Printed 5 labels
+2026-01-15 20:42:26,007 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:42:26,007 - INFO - Completed. Printed 5 labels.
+2026-01-15 20:44:15,881 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:44:15,883 - INFO - Applied config overrides
+2026-01-15 20:44:15,883 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:44:15,883 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:44:15,883 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:44:16,514 - INFO - Fetched 105 inventory rows
+2026-01-15 20:44:16,517 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:44:16,517 - INFO - Loaded 105 printed IDs
+2026-01-15 20:44:16,520 - INFO - No new wines to print.
+2026-01-15 20:44:16,520 - INFO - Completed. Printed 0 labels.
+2026-01-15 20:44:30,120 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:44:30,120 - INFO - Applied config overrides
+2026-01-15 20:44:30,120 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:44:30,121 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:44:30,121 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:44:30,854 - INFO - Fetched 105 inventory rows
+2026-01-15 20:44:30,862 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:44:30,862 - INFO - Loaded 0 printed IDs
+2026-01-15 20:44:30,988 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:44:30,988 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:44:30,991 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:44:30,991 - INFO - Printed 25 labels
+2026-01-15 20:44:30,992 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:44:30,992 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:46:50,509 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:46:50,510 - INFO - Applied config overrides
+2026-01-15 20:46:50,510 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:46:50,510 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:46:50,511 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:46:51,167 - INFO - Fetched 105 inventory rows
+2026-01-15 20:46:51,171 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:46:51,171 - INFO - Loaded 0 printed IDs
+2026-01-15 20:46:51,284 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:46:51,284 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:46:51,284 - INFO - _send_with_retries: localhost:9100, ZPL size: 15772 bytes
+2026-01-15 20:46:51,287 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:46:51,288 - INFO - Printed 25 labels
+2026-01-15 20:46:51,288 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:46:51,288 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:47:07,817 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:47:07,818 - INFO - Applied config overrides
+2026-01-15 20:47:07,818 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:47:07,818 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:47:07,818 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:47:08,305 - INFO - Fetched 105 inventory rows
+2026-01-15 20:47:08,309 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:47:08,310 - INFO - Loaded 0 printed IDs
+2026-01-15 20:47:08,429 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:47:08,429 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:47:08,429 - INFO - _send_with_retries: localhost:9100, ZPL size: 15772 bytes
+2026-01-15 20:47:08,429 - INFO - Attempt 1: Creating socket...
+2026-01-15 20:47:08,429 - INFO - Attempt 1: Connecting to localhost:9100...
+2026-01-15 20:47:08,430 - INFO - Attempt 1: Connected! Sending 15772 bytes...
+2026-01-15 20:47:08,430 - INFO - Attempt 1: Sent! Data size: 15772
+2026-01-15 20:47:08,432 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:47:08,432 - INFO - Printed 25 labels
+2026-01-15 20:47:08,432 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:47:08,432 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:50:26,667 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:50:26,668 - INFO - Applied config overrides
+2026-01-15 20:50:26,669 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:50:26,669 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:50:26,669 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:50:27,171 - INFO - Fetched 105 inventory rows
+2026-01-15 20:50:27,174 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:50:27,174 - INFO - Loaded 0 printed IDs
+2026-01-15 20:50:27,287 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:50:27,287 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:50:27,287 - INFO - _send_with_retries: localhost:9100, ZPL size: 15772 bytes
+2026-01-15 20:50:27,287 - INFO - Attempt 1: Creating socket...
+2026-01-15 20:50:27,287 - INFO - Attempt 1: Connecting to localhost:9100...
+2026-01-15 20:50:27,287 - INFO - Attempt 1: Connected! Sending 15772 bytes...
+2026-01-15 20:50:27,287 - INFO - Attempt 1: Sent! Data size: 15772
+2026-01-15 20:50:27,289 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:50:27,289 - INFO - Printed 25 labels
+2026-01-15 20:50:27,290 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:50:27,290 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:56:15,376 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:56:15,377 - INFO - Applied config overrides
+2026-01-15 20:56:15,377 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:56:15,377 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:56:15,378 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:56:15,910 - INFO - Fetched 105 inventory rows
+2026-01-15 20:56:15,914 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:56:15,915 - INFO - Loaded 0 printed IDs
+2026-01-15 20:56:16,059 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:56:16,059 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:56:16,059 - INFO - _send_with_retries: localhost:9100, ZPL size: 15772 bytes
+2026-01-15 20:56:16,060 - INFO - Attempt 1: Creating socket...
+2026-01-15 20:56:16,060 - INFO - Attempt 1: Connecting to localhost:9100...
+2026-01-15 20:56:16,060 - INFO - Attempt 1: Connected! Sending 15772 bytes...
+2026-01-15 20:56:16,060 - INFO - Attempt 1: Sent! Data size: 15772
+2026-01-15 20:56:16,282 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:56:16,283 - INFO - Printed 25 labels
+2026-01-15 20:56:16,283 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:56:16,283 - INFO - Completed. Printed 25 labels.
+2026-01-15 20:57:37,248 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 20:57:37,249 - INFO - Applied config overrides
+2026-01-15 20:57:37,249 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:57:37,249 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/wine_label_printer/config.yaml
+2026-01-15 20:57:37,249 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 20:57:37,782 - INFO - Fetched 105 inventory rows
+2026-01-15 20:57:37,787 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 20:57:37,787 - INFO - Loaded 0 printed IDs
+2026-01-15 20:57:37,896 - INFO - Combined ZPL: 15763 chars, 25 ^XA blocks, 25 ^XZ terminations
+2026-01-15 20:57:37,896 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 20:57:37,896 - INFO - _send_with_retries: localhost:9100, ZPL size: 15772 bytes
+2026-01-15 20:57:37,896 - INFO - Attempt 1: Creating socket...
+2026-01-15 20:57:37,896 - INFO - Attempt 1: Connecting to localhost:9100...
+2026-01-15 20:57:37,896 - INFO - Attempt 1: Connected! Sending 15772 bytes...
+2026-01-15 20:57:37,896 - INFO - Attempt 1: Sent! Data size: 15772
+2026-01-15 20:57:38,604 - INFO - Printer send succeeded on attempt 1
+2026-01-15 20:57:38,604 - INFO - Printed 25 labels
+2026-01-15 20:57:38,605 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 20:57:38,605 - INFO - Completed. Printed 25 labels.
+2026-01-15 21:06:31,631 - INFO - Logging to /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/logs/wine_label_printer.log
+2026-01-15 21:06:31,633 - INFO - Applied config overrides
+2026-01-15 21:06:31,633 - INFO - Initialized WineLabelPrinter with config: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/src/wine_label_printer/config.yaml
+2026-01-15 21:06:31,633 - INFO - Using config path: /Users/adamprostrollo/Documents/Projects/code/Wine_Label_Printer/wine-label-printer-core/src/wine_label_printer/config.yaml
+2026-01-15 21:06:31,633 - INFO - Loaded secrets for user: aprostrollo
+2026-01-15 21:06:32,317 - INFO - Fetched 105 inventory rows
+2026-01-15 21:06:32,323 - INFO - Saved inventory CSV to storage/cellartracker_inventory.csv
+2026-01-15 21:06:32,323 - INFO - Loaded 0 printed IDs
+2026-01-15 21:06:32,444 - INFO - ZPL package created (not saved to disk). First 400 chars: ^XA^PW609^LL203^FO12,40^BQN,2,5^FDLA,204582022^FS^FO171,17^A0N,19,19^FB401,2,0,L^FDAresca Nizza San Luigi^FS^FO171,59^A0N,19,19^FB401,1,0,L^FDCT:89.3^FS^FO171,80^A0N,19,19^FB401,1,0,L^FDStyle: Dry Red / Barbera^FS^FO171,101^A0N,19,19^FB401,1,0,L^FDRegion: Italy, Piedmont^FS^FO171,122^A0N,19,19^FB401,1,0,L^FDAppellation: Asti, Nizza^FS^FO171,143^A0N,19,19^FB401,1,0,L^FDPurchased: 4/13/25^FS^FO171,1...[truncated]
+2026-01-15 21:06:32,856 - INFO - Printer send succeeded on attempt 1
+2026-01-15 21:06:32,857 - INFO - Printed 25 labels
+2026-01-15 21:06:32,857 - INFO - Saved printed IDs to storage/printed_ids.txt
+2026-01-15 21:06:32,857 - INFO - Completed. Printed 25 labels.

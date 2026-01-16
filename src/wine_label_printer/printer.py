@@ -32,15 +32,27 @@ class Printer:
             return yaml.safe_load(file)
 
     def _write_zpl_file(self, zpl, output_dir=None):
+        """Save ZPL to disk only if enabled; otherwise log the ZPL for debugging.
+
+        Returns: (timestamp, path_or_None, target_dir)
+        """
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        filename = f"{timestamp}.zpl"
+        save_files = bool(self.config.get("printer", {}).get("save_zpl_files", False))
         target_dir = output_dir or self.temp_dir
-        os.makedirs(target_dir, exist_ok=True)
-        path = os.path.join(target_dir, filename)
-        with open(path, "w", encoding="utf-8") as file:
-            file.write(zpl)
-        print(f"Saved ZPL package to: {path}")
-        return timestamp, path, target_dir
+        if save_files:
+            filename = f"{timestamp}.zpl"
+            os.makedirs(target_dir, exist_ok=True)
+            path = os.path.join(target_dir, filename)
+            with open(path, "w", encoding="utf-8") as file:
+                file.write(zpl)
+            logger.info("Saved ZPL package to: %s", path)
+            return timestamp, path, target_dir
+
+        # Default behaviour: don't write ZPL file, just log (debug) and return None path
+        truncated = zpl if len(zpl) < 400 else zpl[:400] + "...[truncated]"
+        logger.info("ZPL package created (not saved to disk). First 400 chars: %s", truncated)
+        logger.debug("Full ZPL:\n%s", zpl)
+        return timestamp, None, target_dir
 
     def _parse_label_size(self, label_size):
         try:
@@ -50,77 +62,12 @@ class Printer:
             return 3.0, 1.0
 
     def _render_preview(self, zpl, timestamp, output_dir=None):
-        if not self.viewer_config.get("enabled", True):
-            return
+        """Deprecated: rendering handled by external viewer/proxy in our new flow.
 
-        url = os.environ.get("VIEWER_URL") or self.viewer_config.get("url", "http://localhost:8088/api/v1/Viewer")
-        label_size = self.config.get("printer", {}).get("label_size", "3x1")
-        width_in, height_in = self._parse_label_size(label_size)
-        dpi = int(self.config.get("printer", {}).get("dpi", 203))
-        dpmm = self.viewer_config.get("print_density_dpmm")
-        if not dpmm:
-            dpmm = max(1, int(round(dpi / 25.4)))
-        else:
-            dpmm = int(dpmm)
-
-        width_mm = width_in * 25.4
-        height_mm = height_in * 25.4
-
-        # Wait for viewer to be ready with intelligent polling
-        max_wait = float(self.viewer_config.get("max_startup_wait_seconds", 15))
-        viewer_ready = self._wait_for_viewer(url, max_wait)
-
-        payload = {
-            "zplData": zpl,
-            "labelWidth": width_mm,
-            "labelHeight": height_mm,
-            "printDensityDpmm": dpmm,
-        }
-        viewer_type = str(self.viewer_config.get("type", "png")).lower()
-        if viewer_type == "pdf":
-            payload["type"] = "PDF"
-
-        save_images = bool(self.viewer_config.get("save_images", False))
-
-        try:
-            response = requests.post(url, json=payload, timeout=15)
-            response.raise_for_status()
-            data = response.json()
-            non_supported = data.get("nonSupportedCommands") or []
-            if non_supported:
-                target_dir = output_dir or self.temp_dir
-                os.makedirs(target_dir, exist_ok=True)
-                issues_path = os.path.join(target_dir, f"{timestamp}.unsupported.txt")
-                with open(issues_path, "w", encoding="utf-8") as file:
-                    for cmd in non_supported:
-                        file.write(f"{cmd}\n")
-                print(f"Viewer reported unsupported commands; saved to: {issues_path}")
-            labels = data.get("labels") or []
-            if not labels:
-                print("Viewer returned no labels.")
-                return
-            if not save_images:
-                print("Viewer preview images are disabled (viewer.save_images=false).")
-                return
-            saved_count = 0
-            target_dir = output_dir or self.temp_dir
-            os.makedirs(target_dir, exist_ok=True)
-            for index, label in enumerate(labels, start=1):
-                image_base64 = label.get("imageBase64")
-                if not image_base64:
-                    continue
-                image_bytes = base64.b64decode(image_base64)
-                suffix = f"_{index:02d}" if len(labels) > 1 else ""
-                image_path = os.path.join(target_dir, f"{timestamp}{suffix}.png")
-                with open(image_path, "wb") as file:
-                    file.write(image_bytes)
-                saved_count += 1
-            if saved_count:
-                print(f"Saved {saved_count} ZPL preview(s) for {len(labels)} label(s).")
-            else:
-                print("Viewer returned no image data.")
-        except Exception as exc:
-            print(f"Viewer preview failed: {exc}")
+        Kept for backward compatibility but no longer invoked by default.
+        """
+        logger.debug("_render_preview called but rendering is disabled in core application.")
+        return
 
     def _wait_for_viewer(self, url, max_wait_seconds=15):
         """Poll the viewer endpoint until it responds, with intelligent backoff."""
@@ -143,12 +90,12 @@ class Printer:
 
     def send_zpl(self, zpl, output_dir=None):
         timestamp, _, target_dir = self._write_zpl_file(zpl, output_dir=output_dir)
-        self._render_preview(zpl, timestamp, output_dir=target_dir)
+        # Rendering is handled externally; just send ZPL to the printer/proxy
         if self.simulate:
             print("[SIMULATION] ZPL Command:")
             print(zpl)
         else:
-            self._send_with_retries(zpl)
+            self._send_with_retries(zpl, timestamp, target_dir)
 
     def print_label(self, zpl, output_dir=None):
         print("Sending label to printer...")
@@ -157,7 +104,7 @@ class Printer:
         self.cleanup_old_runs(keep_count=3)
         self.cleanup_temp()
 
-    def _send_with_retries(self, zpl):
+    def _send_with_retries(self, zpl, timestamp, output_dir=None):
         encoded = zpl.encode("utf-8")
         for attempt in range(1, self.retry_attempts + 1):
             try:
@@ -165,7 +112,49 @@ class Printer:
                     s.settimeout(self.network_timeout)
                     s.connect((self.printer_ip, self.port))
                     s.sendall(encoded)
+
+                    # Signal EOF for our write side so servers waiting for client close can proceed
+                    try:
+                        s.shutdown(socket.SHUT_WR)
+                    except Exception:
+                        pass
+
+                    # Attempt to read optional feedback from the printer/proxy
+                    try:
+                        s.settimeout(2)
+                        data = b""
+                        while True:
+                            chunk = s.recv(4096)
+                            if not chunk:
+                                break
+                            data += chunk
+                    except socket.timeout:
+                        # No feedback received within timeout
+                        data = data
+
                 logger.info("Printer send succeeded on attempt %d", attempt)
+
+                # Process any feedback received
+                if data:
+                    try:
+                        text = data.decode("utf-8", errors="replace").strip()
+                        # Support newline-delimited JSON; take the first non-empty line
+                        first_line = next((ln for ln in text.splitlines() if ln.strip()), None)
+                        if first_line:
+                            import json as _json
+                            fb = _json.loads(first_line)
+                            nsc = fb.get("nonSupportedCommands") or []
+                            if nsc:
+                                target_dir = output_dir or self.temp_dir
+                                os.makedirs(target_dir, exist_ok=True)
+                                issues_path = os.path.join(target_dir, f"{timestamp}.unsupported.txt")
+                                with open(issues_path, "w", encoding="utf-8") as file:
+                                    for cmd in nsc:
+                                        file.write(f"{cmd}\n")
+                                logger.info("Saved printer feedback issues to: %s", issues_path)
+                    except Exception:
+                        logger.debug("Failed to parse printer feedback: %s", data)
+
                 return
             except (socket.timeout, OSError) as exc:
                 logger.warning("Printer send attempt %d failed: %s", attempt, exc)
