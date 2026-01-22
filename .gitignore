@@ -3,6 +3,9 @@ storage/
 tmp/
 logs/
 
+# Secrets
+secrets.yaml
+
 # Python
 __pycache__/
 *.pyc
