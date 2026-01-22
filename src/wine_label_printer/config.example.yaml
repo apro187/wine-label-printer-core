@@ -1,15 +1,18 @@
 printer:
-  ip: "localhost"
+  ip: "192.168.1.100"  # Replace with your printer's IP or hostname
   port: 9100
   darkness: 15
-  batch_size: 50
   simulate: false
   # By default we don't save raw ZPL packages to disk; set true to retain .zpl files for debugging
   save_zpl_files: false
+  # Network resilience for remote printer connections
+  retry_attempts: 5
+  retry_delay: 2
+  network_timeout: 10
 
 viewer:
   url: "http://localhost:5001"
-  enabled: true
+  enabled: false
 
 storage:
   output_dir: "tmp"
@@ -20,7 +23,8 @@ label:
   width: 4
   height: 6
   dpi: 203
-  
+
+batch_size: 5
 print_new_only: true
 test_mode: false
 copies_per_label: 1

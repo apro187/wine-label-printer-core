@@ -5,6 +5,7 @@ import qrcode
 from qrcode.image.pil import PilImage
 import math
 import datetime
+import unicodedata
 
 class LabelGenerator:
     def __init__(self, config_path=None):
@@ -414,13 +415,19 @@ class LabelGenerator:
         line_step = int(round(font_size + max(0.0, line_spacing)))
 
         def zpl_escape(value):
-            return str(value).replace("^", " ")
+            """Escape ZPL special characters while preserving international characters."""
+            text = str(value)
+            # Replace ZPL command characters that would interfere with ZPL syntax
+            text = text.replace("^", "\u005E")  # Use hex representation for caret
+            text = text.replace("~", "\u007E")  # Use hex representation for tilde
+            return text
 
         qr_scale = max(2, min(10, int(round(qr_size / 25))))
         barcode = safe_str(wine_data.get("Barcode", ""))
 
         zpl_lines = [
             "^XA",
+            "^CI28",  # Enable UTF-8 encoding for international characters
             f"^PW{int(canvas_width)}",
             f"^LL{int(canvas_height)}",
             f"^FO{qr_x},{qr_y}^BQN,2,{qr_scale}^FDLA,{zpl_escape(barcode)}^FS",
@@ -438,13 +445,19 @@ class LabelGenerator:
         label_font = max(8, int(round(font_size * 0.9)))
         top_space = max(0, qr_y)
         bottom_space = max(0, canvas_height - (qr_y + qr_size))
+
         if vintage:
-            vintage_y = max(0, int((top_space - label_font) / 2))
+            # Position vintage in the upper space, with padding from top edge
+            # Add extra offset to move it away from the top edge
+            padding_from_top = max(8, int(round(label_font * 0.6)))
+            vintage_y = padding_from_top + int(label_font * 0.8)  # Account for text height
             zpl_lines.append(
                 f"^FO{qr_x},{vintage_y}^A0N,{label_font},{label_font}^FB{qr_size},1,0,C^FD{zpl_escape(vintage)}\\&^FS"
             )
         if drink_window:
-            drink_y = qr_y + qr_size + max(0, int((bottom_space - label_font) / 2))
+            # Position drink window in the lower space, centered between QR and bottom
+            padding_from_qr = max(8, int(round(label_font * 0.6)))
+            drink_y = qr_y + qr_size + padding_from_qr
             zpl_lines.append(
                 f"^FO{qr_x},{drink_y}^A0N,{label_font},{label_font}^FB{qr_size},1,0,C^FD{zpl_escape(drink_window)}\\&^FS"
             )

@@ -35,3 +35,8 @@ htmlcov/
 .env
 venv/
 env/
+
+# Secrets and local config
+secrets.yaml
+src/wine_label_printer/secrets.yaml
+src/wine_label_printer/config.yaml
